@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
+from secret import SECRET_KEY
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
@@ -18,9 +20,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'a&2$22ntlcd2%4zxh1f5oqa$9^kum0j7628*pr1$ety)0ik=kb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -77,15 +76,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Tide.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
 
 # Internationalization

@@ -55,7 +55,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'Tide.urls'
+ROOT_URLCONF = 'tide.urls'
 
 TEMPLATES = [
     {
@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Tide.wsgi.application'
+WSGI_APPLICATION = 'tide.wsgi.application'
 
 
 

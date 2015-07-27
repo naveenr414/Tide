@@ -40,7 +40,7 @@ REQUIRED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-CREATED_APPS = ['core']
+CREATED_APPS = ['core','page']
 
 INSTALLED_APPS = REQUIRED_APPS+CREATED_APPS
 

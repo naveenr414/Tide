@@ -3,6 +3,7 @@ from .models import Page
 from django.http import HttpResponse
 from django.template import loader,RequestContext
 from django.conf import settings
+from . import models
 
 # Create your views here.
 
@@ -17,7 +18,12 @@ def page(request,page_id):
 	markdown+=str(page_id)+".md"
 	markdown = open(markdown).read()
 
-	context = RequestContext(request,{'title':"<h1> Joe </h1>"})
+	categoryObjects = models.Category.objects.all()
+	categoryDictionary = {}
+	for i in categoryObjects:
+		categoryDictionary[i.name] = i.color
+	
+	context = RequestContext(request,{'title':"<h1> Joe </h1>","category":categoryDictionary})
 	return HttpResponse(template.render(context))
 
 

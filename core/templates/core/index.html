@@ -1,9 +1,11 @@
 {% extends "core/header.html" %}
+{% block header %}
+	{% with category as cat %}
+	{{block.super}}
+	{% endwith %}
+{% endblock %}
+
 
 {% block content %}
 <h1> Hello World </h1>
-{% for key,value in category.items %}
-<li> {{key}}:{{value}}</li>
-{% endfor %}
-
 {% endblock %}

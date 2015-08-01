@@ -1,3 +1,11 @@
+{% block header %}
 <H1> This is the Header </H1>
+	{% for key,value in cat.items %}
+		<li> {{key}}:{{value}} </li>
+	{% endfor %}
+<h1> End Block </h1>
+{% endblock %}
+
 {% block content %}{% endblock %}
+
 <H1> This is the Footer </H1>

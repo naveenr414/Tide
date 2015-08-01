@@ -1,5 +1,13 @@
 {% extends "core/header.html" %}
 
+{% block header %}
+	
+	{% with category as cat %}
+		{{ block.super }}
+	{% endwith %}
+
+{% endblock %}
+
 {% block content %}
 <H1> Page View </H1>
 {{title|safe}}

@@ -1,8 +1,9 @@
 from django.conf.urls import url,include
 
 from django.views.generic import TemplateView
+from . import views
 
 urlpatterns = [
 	url(r'^page/',include('page.urls')),
-	url(r'^$',TemplateView.as_view(template_name="core/index.html")),
+	url(r'^$',views.main,name="main"),
 ]

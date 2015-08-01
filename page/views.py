@@ -3,9 +3,19 @@ from .models import Page
 from django.http import HttpResponse
 from django.template import loader,RequestContext
 from django.conf import settings
+from core.views import getCategories
 from . import models
 
 # Create your views here.
+
+def main(request):
+	pages = models.Page.objects.all()
+	template = loader.get_template("page/index.html")
+
+	category = models.Category.objects.all()
+
+	context = RequestContext(request,{'pages':pages,'category':getCategories()})
+	return HttpResponse(template.render(context))
 
 def page(request,page_id):
 	p = Page.objects.get(pk=page_id)

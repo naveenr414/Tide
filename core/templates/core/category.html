@@ -8,4 +8,7 @@
 
 {% block content %}
 <h1> {{currentCategory}} </h1>
+{% for page, id in pageList.items %}
+<a href="../page/{{id}}"> {{page}} </a>
+{% endfor %}
 {% endblock %}

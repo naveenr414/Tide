@@ -1,7 +1,8 @@
 {% block header %}
 <H1> This is the Header </H1>
+<li> <a href="/"> Home </a> </li>
 	{% for key,value in cat.items %}
-		<li> {{key}}:{{value}} </li>
+		<li> <a href="/{{key}}" style="background-color:{{value}};"> {{key}} </a>  </li>
 	{% endfor %}
 <h1> End Block </h1>
 {% endblock %}

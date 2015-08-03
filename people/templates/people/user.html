@@ -3,17 +3,13 @@
 {% block header %}
 
 	{% with category as cat %}
+
 		{{block.super}}
-	{% endwith %}
+
+	{% endwith %}	
 
 {% endblock %}
+
 {% block content %}
-Hi
-<form action="" method="POST">
-	{% csrf_token %}
-
-	{{form}}
-	<input type="submit" value="submit"/>
-</form>
+	Hi
 {% endblock %}
-

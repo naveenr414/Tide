@@ -4,7 +4,11 @@
 	{% for key,value in cat.items %}
 		<li> <a href="/{{key}}" style="background-color:{{value}};"> {{key}} </a>  </li>
 	{% endfor %}
-<h1> End Block </h1>
+{% if request.user.is_authenticated %} <a href="/user/"> {{request.user.username}} </a> <br> 
+<a href="/user/logout"> Logout </a>
+{% else %}<a href="/user/login"> login </a> {% endif %} 
+<br>
+
 {% endblock %}
 
 {% block content %}{% endblock %}

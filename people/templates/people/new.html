@@ -1,0 +1,25 @@
+{% extends "core/header.html" %}
+
+{% block header %}
+	
+	{% with category as cat %}
+		
+		{{block.super}}
+
+	{% endwith %}
+
+{% endblock %}
+
+{% block content %}
+	<form action="" name="New" method="POST">
+		{% csrf_token %} 
+		{{form}}
+	
+		<input type="submit"/>
+	</form>
+
+	{% for key,value in forms.errors %}
+    		{{value}}
+	{% endfor %}
+
+{% endblock %}

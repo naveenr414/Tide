@@ -40,7 +40,7 @@ REQUIRED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-CREATED_APPS = ['core','page']
+CREATED_APPS = ['core','page','people']
 
 INSTALLED_APPS = REQUIRED_APPS+CREATED_APPS
 
@@ -81,7 +81,6 @@ PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_ROOT,'templates').replace('\\','/'),
 )
-
 
 
 
